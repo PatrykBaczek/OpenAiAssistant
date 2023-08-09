@@ -8,7 +8,8 @@ def speak(text):
     filename = 'voice.mp3'
     tts.save(filename)
     playsound.playsound(filename)
-    os.system('cmd /c "del voice.mp3"')
+    # os.system('cmd /c "del voice.mp3"')
+    os.remove("voice.mp3")
 
 def get_audio():
     r = sr.Recognizer()
